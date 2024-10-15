@@ -1,5 +1,6 @@
 <?php
 $students = [];
+$cars = [];
 $students[] = [
     'firstname' => 'Natalia',
     'lastname' => 'Kaminski',
@@ -25,6 +26,16 @@ $students[] = [
         'ajax' => 2
     ]
 ];
+$cars[] = [
+    'speed' => 'szybkie',
+    'marka' => 'BMW',
+    'cena' => 10000,
+];
+$cars[] = [
+    'speed' => 'calkiem calkiem',
+    'marka' => 'Skoda',
+    'cena' => 3000,
+];
 foreach ($students as $whatever => $student) {
     echo "$student[firstname] $student[lastname]";
     if($student['isStudent']) {
@@ -47,4 +58,8 @@ foreach ($students as $whatever => $student) {
         echo ", nie jest studentem/studentką.";
     }
     echo "<br>";
+}
+
+foreach ($cars as $car) {
+    echo "$car[marka] kosztuje: $car[cena], a jezeli chodzi o predkosc to jest: $car[speed]<br>";
 }
