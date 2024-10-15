@@ -62,4 +62,16 @@ foreach ($students as $whatever => $student) {
 
 foreach ($cars as $car) {
     echo "$car[marka] kosztuje: $car[cena], a jezeli chodzi o predkosc to jest: $car[speed]<br>";
+    echo "<br>";
+}
+
+foreach ($cars as $car) {
+    if ($car['cena'] > 5000) {
+        echo "$car[marka] to luksusowe auto";
+        echo "<br>";
+    }
+    else {
+        echo "$car[marka] to zwyczajne auto";
+        echo "<br>";
+    }
 }
